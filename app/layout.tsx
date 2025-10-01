@@ -11,16 +11,16 @@ const display = Anton({
 });
 
 export const metadata: Metadata = {
-  title: "o7xabz — Web3 Ambassador & Moderator",
+  title: "DevLabs — Web3 Ambassador & Moderator",
   description:
     "Connecting dots across Web3. Ambassador · Moderator · Content Creator.",
   icons: { icon: "/favicon.png" },
   openGraph: {
-    title: "o7xabz — Web3 Ambassador & Moderator",
+    title: "DevLabs — Web3 Ambassador & Moderator",
     description:
       "Connecting dots across Web3. Ambassador · Moderator · Content Creator.",
-    url: "https://your-domain.com",
-    siteName: "o7xabz",
+    url: "https://devlabs-portofolio.vercel.app/",
+    siteName: "DevLabs",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
