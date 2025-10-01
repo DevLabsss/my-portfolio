@@ -24,3 +24,107 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Accent & helpers — UNION-ish */
+:root {
+  --cyan: #a8e6f0; /* secondary dari mock brand */
+  --ink: #000000;
+  --card: #0b0d0f;
+  --line: rgba(168, 230, 240, 0.35);
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.u-bracket {
+  position: relative;
+}
+.u-bracket::before,
+.u-bracket::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 1px;
+  background: var(--cyan);
+}
+.u-bracket::before {
+  left: -14px;
+}
+.u-bracket::after {
+  right: -14px;
+}
+
+.u-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.link-cyan {
+  color: var(--cyan);
+}
+.link-cyan:hover {
+  text-decoration: underline;
+}
+.btn-ghost {
+  border: 1px solid var(--line);
+  background: transparent;
+}
+.btn-primary {
+  background: var(--cyan);
+  color: #001317;
+  font-weight: 700;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 10px var(--cyan), 0 0 20px var(--cyan), 0 0 30px var(--cyan);
+    border-color: var(--cyan);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--cyan), 0 0 40px var(--cyan), 0 0 60px var(--cyan);
+    border-color: #ffffff;
+  }
+}
+
+@keyframes textGlowKeepColorSoft {
+  0%,
+  100% {
+    text-shadow: 0 0 3px currentColor, 0 0 6px rgba(168, 230, 240, 0.6),
+      0 0 12px rgba(168, 230, 240, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 4px currentColor, 0 0 8px rgba(168, 230, 240, 0.7),
+      0 0 16px rgba(168, 230, 240, 0.5);
+  }
+}
+
+.glow-text-soft {
+  text-shadow: 0 0 6px rgba(168, 230, 240, 0.5);
+}
+
+.glow-text-keep {
+  animation: textGlowKeepColor 2s infinite ease-in-out;
+}
+
+.glow-border {
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+.glow-text {
+  animation: textGlow 2s infinite ease-in-out;
+}
